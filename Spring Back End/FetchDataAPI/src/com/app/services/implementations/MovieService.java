@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class MovieService implements IMovieService {
-	private static final String tokenId = "4eaa41976f9f88a8f1ea07358bd0971b";
+	private static final String tokenId = <your_token_id>;
 	private static final String baseUrl = "https://api.themoviedb.org/3/movie/";
 	private static final String searchMovieUrl = "https://api.themoviedb.org/3/search/movie";
 
