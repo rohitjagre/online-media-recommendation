@@ -25,7 +25,7 @@ public class TvShowService implements ITvShowService {
 
 	public static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
-	private static final String tokenId = "4eaa41976f9f88a8f1ea07358bd0971b";
+	private static final String tokenId = <your_token_id>;
 	private static final String baseUrl = "https://api.themoviedb.org/3/tv/";
 
 	@Override
