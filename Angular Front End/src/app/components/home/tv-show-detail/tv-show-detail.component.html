@@ -1,0 +1,28 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+<div *ngIf="isDetailFetched">
+  <div class="col-sm-6">
+    <div class="thumbnail">
+      <img src="http://image.tmdb.org/t/p/w342{{tvShowDetail.posterPath}}" alt="" class="img-fluid img-thumbnail">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="thumbnail">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <h2>{{tvShowDetail.name}}</h2>
+        </li>
+        <li class="list-group-item">
+          <h4>
+            <strong>Popularity</strong>{{tvShowDetail.popularity | number}}</h4>
+        </li>
+        <li class="list-group-item">
+          <h4>
+            <strong>Release Date</strong>{{tvShowDetail.firstAirDate | date }}</h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <app-recommend-tvshows [tvShowId]="tvShowId"></app-recommend-tvshows>
+</div>

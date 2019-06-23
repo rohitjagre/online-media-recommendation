@@ -1,0 +1,15 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+<div>
+  <div class="row text-center text-lg-left">
+
+    <div *ngFor="let tvShow of tvShows" class="col-lg-3 col-md-4 col-xs-6">
+      <div class="thumbnail">
+        <a [routerLink]="['/home','tvshow',tvShow?.id]" class="d-block mb-4 h-100">
+          <img class="img-fluid img-thumbnail" src="http://image.tmdb.org/t/p/w342{{tvShow?.posterPath}}" alt="">
+          <h3 class="btn">{{tvShow?.name}}</h3>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

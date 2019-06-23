@@ -1,0 +1,30 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }">
+  <div *ngIf="isFetchingFinished">
+    <div class="col-sm-6">
+      <div class="thumbnail">
+        <img src="http://image.tmdb.org/t/p/w342{{movieDetail.posterPath}}" alt="" class="img-fluid img-thumbnail">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="thumbnail">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h2>{{movieDetail.title}}</h2>
+          </li>
+          <li class="list-group-item">
+            <h4>
+              <strong>Popularity</strong>{{movieDetail.popularity | number}}</h4>
+          </li>
+          <li class="list-group-item">
+            <h4>
+              <strong>Release Date</strong>{{movieDetail.releaseDate | date }}</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ngx-loading>
+
+<div class="container">
+  <app-recommend-movies [movieId]="movieId"></app-recommend-movies>
+</div>
